@@ -57,13 +57,13 @@
 
 const VkBot = require('node-vk-bot-api');
 
-const bot = new VkBot(process.env.TOKEN);
+const bot = new VkBot(process.env.TOKEN)
 
 bot.command('/start', (ctx) => {
   ctx.reply('Hello!');
 })
-bot.command('превед', (ctx) => {
-  ctx.reply('здарова');
+bot.command('1', (ctx) => {
+  ctx.reply('2');
 })
 
 bot.startPolling();
