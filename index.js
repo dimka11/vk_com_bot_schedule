@@ -44,8 +44,7 @@ const bot = new VkBot({
   token: process.env.TOKEN,
   group_id: 192619748,
   polling_timeout: 5
-})
-
+});
 
 bot.on((ctx) => {
   ctx.reply('Hello!');
@@ -53,4 +52,4 @@ bot.on((ctx) => {
 
 bot.startPolling(() => {
   console.log('Bot started.')
-})
+});
