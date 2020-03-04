@@ -82,9 +82,9 @@ const bot = new VkBot({
 })
 
 
-bot.on((ctx) => {
-  ctx.reply('Hello!');
-});
+bot.command('/start', (ctx) => {
+  ctx.reply('Hello!')
+})
 
 bot.startPolling(() => {
   console.log('Bot started.')
