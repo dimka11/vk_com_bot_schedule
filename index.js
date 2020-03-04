@@ -61,9 +61,6 @@ const bot = new VkBot(process.env.TOKEN)
 
 bot.command('/start', (ctx) => {
   ctx.reply('Hello!');
-})
-bot.command('1', (ctx) => {
-  ctx.reply('2');
-})
+});
 
 bot.startPolling();
