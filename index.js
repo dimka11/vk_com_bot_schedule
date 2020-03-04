@@ -1,4 +1,4 @@
-const VkBot = require('node-vk-bot-api')
+// const VkBot = require('node-vk-bot-api')
 
 // const bot = new VkBot(process.env.TOKEN)
 
@@ -40,16 +40,30 @@ const VkBot = require('node-vk-bot-api')
 // const bot = new VkBot(process.env.TOKEN)
 
 // Advanced usage
-const bot = new VkBot({
-  token: process.env.TOKEN,
-  group_id: 192619748,
-  polling_timeout: 5
-});
+// const bot = new VkBot({
+//   token: process.env.TOKEN,
+//   group_id: 192619748,
+//   polling_timeout: 5
+// });
 
-bot.on((ctx) => {
+// bot.on((ctx) => {
+//   ctx.reply('Hello!');
+// });
+
+// bot.startPolling(() => {
+//   console.log('Bot started.')
+// });
+
+
+const VkBot = require('node-vk-bot-api');
+
+const bot = new VkBot(process.env.TOKEN);
+
+bot.command('/start', (ctx) => {
   ctx.reply('Hello!');
-});
+})
+bot.command('превед', (ctx) => {
+  ctx.reply('здарова');
+})
 
-bot.startPolling(() => {
-  console.log('Bot started.')
-});
+bot.startPolling();
